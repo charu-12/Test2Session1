@@ -1,27 +1,38 @@
-#include <stdio.h>
-
+#include<stdio.h>
+int input_number()
+{
+  int n;
+  printf("enter number:");
+  scanf("%d",&n);
+  return n;
+}
+int is_prime(int n)
+{
+  for(int i=2;i<n;i++)
+    {
+      if(n%i!=0)
+      {
+        return 0;
+      }
+    return 1; 
+    }
+}
+void output(int n,int is_prime)
+{
+  {
+   if(is prime==0)
+   printf("%d is a prime number\n",n);
+  }
+  else
+  {
+    printf("%d is not a prime number\n",n);
+  }
+}
 int main()
 {
-    int i, num, isPrime;
-    isPrime = 1; 
-    printf("Enter any number to check prime: ");
-    scanf("%d", &num);
-    for(i=2; i<=num/2; i++)
-    {
-    if(num%i==0)
-    {
-    isPrime = 0;
-    break;
-    }
-    }
-    if(isPrime == 1 && num > 1)
-    {
-    printf("%d is prime number", num);
-    }
-    else
-    {
-    printf("%d is composite number", num);
-    }
-
-    return 0;
+  int n, is prime;
+  n=input_number();
+  is prime=is_prime(n);
+  output(n,is prime);
+  return 0;
 }
